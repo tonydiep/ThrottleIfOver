@@ -2,7 +2,16 @@
 Throttle CPU if temperature over x celcius
 
 
-## Copy script
+## How to run script
+
+Usage: ThrottleIfOver.sh TEMPERATURE
+```
+$ sudo ./ThrottleIfOver.sh 60
+```
+
+## How to run script automatically
+
+### Copy script
 
 ```
 $ sudo cp ThrottleIfOver.sh /usr/bin/
@@ -11,7 +20,7 @@ $ sudo chmod 644 /usr/bin/ThrottleIfOver.sh    # make readable by root only
 $ sudo chmod +x /usr/bin/ThrottleIfOver.sh
 ```
 
-## Define the service
+### Create service to run script
 
 ```
 # /etc/systemd/system/ThrottleIfOver.service
@@ -30,14 +39,14 @@ Group=root
 WantedBy=default.target
 ```
 
-## Test the script
+### Start the service
 
 ```
 $ sudo systemctl start ThrottleIfOver
 $ sudo systemctl status ThrottleIfOver
 ```
 
-## Start the script automatically
+### Start the service automatically
 
 ```
 $ sudo systemctl enable ThrottleIfOver
