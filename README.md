@@ -6,7 +6,7 @@ Throttle CPU if temperature over x celcius
 
 Usage: ThrottleIfOver.sh TEMPERATURE
 ```
-$ sudo ./ThrottleIfOver.sh 60
+$ sudo ./ThrottleIfOver.sh 65
 ```
 
 ## How to run script automatically
