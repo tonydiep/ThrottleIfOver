@@ -30,7 +30,7 @@ Description=Throttle CPU if temperature over x
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/ThrottleIfOver.sh 60
+ExecStart=/usr/bin/ThrottleIfOver.sh 65
 Restart=always
 User=root
 Group=root

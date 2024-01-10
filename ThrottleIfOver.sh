@@ -8,7 +8,7 @@ max_temp=$1
 
 if [[ $max_temp -eq null ]]; then
     # use safe default
-    max_temp=60
+    max_temp=65
 fi
 
 # Start throttling when temperature is max_temp - padding
