@@ -29,10 +29,10 @@ while true; do
     current_temp=$((current_temp / 1000))
 
     if [[ $current_temp -gt $max_temp ]]; then
-        echo $(date) "$current_temp > $max_temp: Throttling"
+        # echo $(date) "$current_temp > $max_temp: Throttling"
         throttle
     elif [[ $throttled ]] && [[ $current_temp -lt $threshold ]]; then
-        echo $(date) "$current_temp < $threshold: Unthrottling"
+        # echo $(date) "$current_temp < $threshold: Unthrottling"
         unthrottle
     fi
     # echo $(date) "$current_temp"
