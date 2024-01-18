@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]; then
+    echo "Root privileges required."
+    exit 1
+fi
+
 # Don't let CPU go over this temperature
 if [ "$#" -gt 0 ]; then
     max_temp=$1
