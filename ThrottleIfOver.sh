@@ -62,7 +62,7 @@ while true; do
         if [[ $current_temp -lt $threshold ]]; then
             echo $(date) "$current_temp < $threshold: Unthrottling"
             unthrottle
-            unthrottled=true
+            throttled=false
         fi
     fi
     # echo $(date) "$current_temp"
