@@ -1,6 +1,12 @@
 # ThrottleIfOver
 Throttle CPU if temperature over x celcius
 
+## Install Dependencies
+
+```
+sudo apt install cpufrequtils
+```
+
 
 ## How to run script
 
